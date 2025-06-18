@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { useSidebar } from "../context/SidebarContext";
 import { Search, BarChart2, Award } from "lucide-react";
-import { useCallback} from "react";
+import { useCallback } from "react";
 
 const navItems = [
-  { name: "Tra cứu điểm", path: "/lookup", icon: <Search /> },
-  { name: "Thống kê", path: "/statistics", icon: <BarChart2 /> },
-  { name: "Top 10 khối A", path: "/topblockapage", icon: <Award /> },
+  { name: "Score Lookup", path: "/lookup", icon: <Search /> },
+  { name: "Statistics", path: "/statistics", icon: <BarChart2 /> },
+  { name: "Top 10 Block A", path: "/topblockapage", icon: <Award /> },
 ];
 
 const AppSidebar = () => {
@@ -22,9 +22,7 @@ const AppSidebar = () => {
     <aside
       className={`fixed top-0 left-0 mt-16 lg:mt-0 h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 transition-all duration-300 z-50
         ${isExpanded || isMobileOpen || isHovered ? "w-64" : "w-20"}
-        ${
-          isMobileOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0`}
+        ${isMobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -34,6 +32,7 @@ const AppSidebar = () => {
           <span className="text-lg font-semibold">G-Score</span>
         )}
       </div>
+
       {/* Navigation */}
       <nav className="px-4">
         <ul className="space-y-2">

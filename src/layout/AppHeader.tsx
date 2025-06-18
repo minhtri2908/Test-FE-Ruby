@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-
 import { useSidebar } from "../context/SidebarContext";
 
 const AppHeader: React.FC = () => {
@@ -70,12 +69,11 @@ const AppHeader: React.FC = () => {
                 />
               </svg>
             )}
-            {/* Cross Icon */}
           </button>
         </div>
         <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
           <h1 className="text-xl font-bold text-gray-800 dark:text-white whitespace-nowrap">
-            Bài làm của Trí Phạm
+            Assignment by Tri Pham
           </h1>
         </div>
       </div>

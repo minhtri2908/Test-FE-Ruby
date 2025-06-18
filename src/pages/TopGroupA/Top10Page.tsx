@@ -14,17 +14,17 @@ const TopBlockAPage = () => {
   return (
     <div className="p-4 sm:p-6">
       <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
-        Top 10 Thí Sinh Khối A
+        Top 10 Students - Block A
       </h1>
       <p className="mb-4 text-sm sm:text-base text-gray-600 dark:text-gray-300">
-        Danh sách 10 học sinh có điểm cao nhất tổ hợp Toán - Lý - Hóa.
+        List of top 10 students with the highest scores in Math, Physics, and Chemistry.
       </p>
 
       <div className="overflow-x-auto rounded shadow-sm border border-gray-200 dark:border-gray-700">
         <table className="min-w-full text-sm sm:text-base bg-white dark:bg-gray-900">
           <thead className="bg-gray-100 dark:bg-gray-800">
             <tr>
-              {["STT", "SBD", "Toán", "Lý", "Hóa", "Tổng điểm khối A"].map(
+              {["No.", "Registration No.", "Math", "Physics", "Chemistry", "Block A Total"].map(
                 (h) => (
                   <th
                     key={h}
