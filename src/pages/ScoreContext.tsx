@@ -37,7 +37,7 @@ export const ScoreProvider = ({ children }: { children: React.ReactNode }) => {
 
     const fetchData = async (delay = 1000) => {
       try {
-        const res = await api.get("/top_block_a");
+        const res = await api.get("/student_scores/top_block_a");
         if (!cancelled) {
           setStudents(res.data);
           setLoading(false); 
@@ -59,7 +59,7 @@ export const ScoreProvider = ({ children }: { children: React.ReactNode }) => {
     if (reportCache[subject]) {
       return reportCache[subject];
     }
-    const res = await api.get("/report", { params: { subject } });
+    const res = await api.get("/student_scores/report", { params: { subject } });
     const data = res.data as Record<LevelType, number>;
     setReportCache((prev) => ({ ...prev, [subject]: data }));
     return data;

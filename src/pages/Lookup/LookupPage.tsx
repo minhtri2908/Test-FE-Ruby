@@ -17,7 +17,7 @@ const LookupPage = () => {
     setError("");
 
     try {
-      const res = await api.get(`/lookup/${sbd}`);
+      const res = await api.get(`/student_scores/lookup/${sbd}`);
       setResult(res.data);
     } catch (err: any) {
       setResult(null);

@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), svgr(/*...*/)],
   server: {
     proxy: {
-      '/api/student_scores': {
+      '/api': {
         target: 'https://rails-thpt2024.onrender.com',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '/api'),
