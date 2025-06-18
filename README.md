@@ -105,4 +105,5 @@ Then deploy the `dist/` folder to your preferred hosting platform (e.g., Vercel,
 This project is based on the [TailAdmin React Template](https://tailadmin.com), a free admin dashboard UI built with React and Tailwind CSS.
 
 ---
-
+# Demo link:
+https://test-fe-ruby.vercel.app/
