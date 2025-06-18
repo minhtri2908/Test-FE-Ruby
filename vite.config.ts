@@ -1,22 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
+// https://vite.dev/config/
 export default defineConfig({
   base: "/",
-  plugins: [
-    react(),
-    svgr(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "static.json", // file gốc
-          dest: "."            // copy vào thư mục dist/
-        }
-      ]
-    })
-  ],
+  plugins: [react(), svgr(/*...*/)],
   server: {
     proxy: {
       '/api': {
@@ -27,3 +16,4 @@ export default defineConfig({
     },
   },
 });
+
