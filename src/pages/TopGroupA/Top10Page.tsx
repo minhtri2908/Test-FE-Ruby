@@ -1,4 +1,4 @@
-import { useScore } from "../ScoreContext";
+import { useScore } from "../Providers/ScoreContext";
 import LoadingSpinner from "../../components/LoadingSpinner";
 
 const TopBlockAPage = () => {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import BarChartOne from "../../components/charts/bar/BarChartOne";
-import { useScore } from "../ScoreContext";
+import { useScore } from "../Providers/ScoreContext";
 import LoadingSpinner from "../../components/LoadingSpinner";
 
 const levels = [">=8", "6-8", "4-6", "<4"] as const;

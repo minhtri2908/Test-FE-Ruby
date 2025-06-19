@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import api from "../api";
+import api from "../../api";
 
 type Student = {
   id: number;
@@ -44,7 +44,7 @@ export const ScoreProvider = ({ children }: { children: React.ReactNode }) => {
         }
       } catch (err) {
         console.warn("Backend chưa sẵn sàng, thử lại sau", delay, "ms");
-        setTimeout(() => fetchData(Math.min(delay * 2, 8000)), delay); // exponential back‑off
+        setTimeout(() => fetchData(Math.min(delay * 2, 8000)), delay); 
       }
     };
 
